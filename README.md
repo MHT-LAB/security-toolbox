@@ -14,9 +14,12 @@ Organized by what the tool *does*, not by product category. Pick the folder for 
 - [`network-and-homelab/`](network-and-homelab/README.md) — self-hosted infrastructure and networking
 - [`learn-and-practice/`](learn-and-practice/README.md) — hands-on ranges, CTFs, and training
 
+Each category README leads with a **🏆 Top 15** — the most widely adopted tools for that job, by real-world usage — followed by a longer **More tools worth knowing** list. Links point to the tool's GitHub repo where one exists; commercial/SaaS tools with no public repo (Burp Suite, Shodan, Maltego, TryHackMe, HTB, Proxmox) link to the official site instead and say so.
+
 ## Entry format
 
-    - [Tool Name](https://link) — what it does, one line, why it's worth using.
+    - [Tool Name](https://github-link-or-site) — what it does, one line.
+      *Use it:* the most appropriate way to test or run this in a real lab/infrastructure — not just what it is, but how to actually deploy or invoke it safely.
 
 ## Contributing
 
