@@ -36,5 +36,10 @@ Forensics, malware analysis, and pulling the real story out of an artifact.
 - **[FLARE-VM](https://github.com/mandiant/flare-vm)** — Mandiant's Windows VM configuration for reverse engineering and malware analysis.
 - **[FLOSS](https://github.com/mandiant/flare-floss)** — extracts obfuscated strings from malware binaries.
 - **[Arsenal Image Mounter](https://github.com/ArsenalRecon/Arsenal-Image-Mounter)** — mounts forensic disk images as drives on Windows for native tool access.
+- **[VirusTotal](https://www.virustotal.com)** — free multi-engine file/URL/hash reputation lookup; SaaS, no public core repo.
+  *Use it:* check a hash or URL before you ever run it, and pivot from a VT relationship graph to find related samples/infrastructure — never upload sensitive or client-confidential files, VT results are shared with its partner engines.
+- **[JoeSandbox](https://www.joesandbox.com)** — commercial automated malware sandbox with a free/community submission tier; SaaS, no public repo.
+- **[Hybrid Analysis](https://www.hybrid-analysis.com)** — free, CrowdStrike-run automated malware sandbox (Falcon Sandbox); SaaS, no public repo.
+- **[MxToolbox Email Header Analyzer](https://mxtoolbox.com/EmailHeaders.aspx)** — free RFC822 email-header parser for tracing a phishing email's real origin; SaaS, no public repo.
 
 *General infrastructure guidance:* run malware sandboxes (CAPE/Cuckoo, REMnux) on isolated hosts with no route back to production — a dedicated hypervisor VLAN with host-only networking is standard. Work from disk-image copies and hash-verify them before and after analysis; never analyze on the source drive.

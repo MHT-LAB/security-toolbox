@@ -43,5 +43,6 @@ Finding and mapping what's publicly visible — before anyone else does.
 - **[OSINT Framework](https://github.com/lockfale/OSINT-Framework)** — curated index of OSINT resources by category (site + repo).
 - **[IVRE](https://github.com/ivre/ivre)** — network recon framework built on Nmap/Masscan/Zeek data for internal asset tracking.
 - **[Sn1per](https://github.com/1N3/Sn1per)** — automated pentest recon scanner that chains many of the above tools.
+- **[AbuseIPDB](https://www.abuseipdb.com)** — free crowdsourced IP-address reputation and abuse-report lookup; SaaS, no public repo.
 
 *General infrastructure guidance:* run recon tooling from a dedicated, isolated jump host (not your daily driver), keep results in a scoped case-management tool (see [`detect-and-respond/`](../detect-and-respond/README.md) — TheHive) rather than loose files, and never point active scanners (Nmap, Masscan, Nuclei, ffuf) at anything outside written authorization.
