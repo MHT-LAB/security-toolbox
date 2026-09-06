@@ -15,13 +15,13 @@ Organized by what the tool *does*, not by product category. Pick the folder for 
 - [`learn-and-practice/`](learn-and-practice/README.md) — hands-on ranges, CTFs, and training
 - [`threat-intel-and-reference/`](threat-intel-and-reference/README.md) — ISACs, sharing communities, standards bodies, and vendor intel feeds
 
-Each category README leads with a **🏆 Top 15** — the most widely adopted tools for that job, by real-world usage — followed by a longer **More tools worth knowing** list. Links point to the tool's GitHub repo where one exists; commercial/SaaS tools with no public repo (Burp Suite, Shodan, Maltego, TryHackMe, HTB, Proxmox) link to the official site instead and say so.
+**Every category is broken out into per-tool pages** under `<category>/tools/` — each tool gets its own file with Overview, Install/Deploy, Common Commands, a concrete Lab Exercise, and Related Tools, instead of a one-line link. Each category `README.md` is an index table (Top 15 + "more tools worth knowing," plus a Deception & Honeypots section under `detect-and-respond/`) pointing to every page. Links point to the tool's GitHub repo where one exists; commercial/SaaS tools with no public repo (Burp Suite, Shodan, Maltego, TryHackMe, HTB, Proxmox, CISA/vendor threat-intel portals) link to the official site instead and say so. Where the same tool is genuinely shared across categories (MISP, OPNsense, Metasploitable3/DVWA/WebGoat/Juice Shop), only one category owns the page — the others cross-reference it rather than duplicating content.
 
-**[`test-and-exploit/`](test-and-exploit/README.md) is fully broken out into per-tool pages** under [`test-and-exploit/tools/`](test-and-exploit/tools/) — each tool gets its own file with Overview, Install/Deploy, Common Commands, a concrete Lab Exercise, and Related Tools, instead of a one-line link. The category README is now an index table pointing to each page. This is the pattern the other categories will get next, once it's confirmed useful in this one.
+240 markdown files, 231 tool pages across 8 categories — every internal link has been verified to resolve.
 
 ## Entry format
 
-**Index-style categories** (currently `test-and-exploit/`): the README is a table linking to `tools/<tool-slug>.md`. Each tool page follows:
+Each category README is a table linking to `tools/<tool-slug>.md`. Every tool page follows:
 
     # Tool Name
     One-line description.
@@ -32,10 +32,7 @@ Each category README leads with a **🏆 Top 15** — the most widely adopted to
     ## Lab Exercise
     ## Related Tools
 
-**Flat-list categories** (everything else, for now):
-
-    - [Tool Name](https://github-link-or-site) — what it does, one line.
-      *Use it:* the most appropriate way to test or run this in a real lab/infrastructure — not just what it is, but how to actually deploy or invoke it safely.
+For `threat-intel-and-reference/`, where most entries are communities or reference sites rather than software, "Install/Deploy" and "Common Commands" become "how to access/join" and "how to query the feed."
 
 ## Contributing
 

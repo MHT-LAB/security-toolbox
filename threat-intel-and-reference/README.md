@@ -2,33 +2,35 @@
 
 ISACs, sharing communities, standards bodies, and vendor threat-intel feeds — where information moves between organizations rather than tools that run against a target.
 
+Every tool below has its own page under [`tools/`](tools/) with Overview, Install/Deploy, Common Commands, a concrete Lab Exercise, and Related Tools — not just a link out. For this category "Install/Deploy" and "Common Commands" often mean "how to access or join" and "how to query the feed," since most entries are communities or reference sites rather than software.
+
 ## 🏆 Top 15 (most widely used)
 
-- **[National Council of ISACs](https://www.nationalisacs.org)** — directory of Information Sharing and Analysis Centers by sector; membership is usually free, join the one for your industry (e.g. financial services, healthcare).
-  *Use it:* find your sector's ISAC and get an analyst or IT lead onto its mailing list/portal — most of the value here is the sector-specific advisory feed, not the directory page itself.
-- **[Cyber Threat Alliance](https://www.cyberthreatalliance.org)** — vendor-neutral nonprofit coordinating threat-intel sharing across member security vendors.
-- **[CISA Automated Indicator Sharing (AIS)](https://www.cisa.gov/ais)** — free, real-time bidirectional machine-to-machine indicator sharing with the US government.
-  *Use it:* connect a TAXII client (e.g. through MISP or OpenCTI) to AIS to pull STIX-formatted indicators automatically rather than reading advisories by hand.
-- **[MISP](https://www.misp-project.org)** — open-source threat-intel platform; also listed under [`detect-and-respond/`](../detect-and-respond/README.md) since it's both a feed consumer and a case tool.
-- **[Uncoder IO (SOC Prime)](https://uncoder.io)** — free browser-based converter between Sigma, Roota, and native SIEM/EDR query languages.
-- **[LevelBlue Open Threat Exchange (OTX)](https://otx.alienvault.com)** — free, crowdsourced threat-intel sharing platform (formerly AlienVault OTX).
-- **[CISA Cybersecurity Best Practices](https://www.cisa.gov/topics/cybersecurity-best-practices)** — the US government's baseline guidance hub for organizational security practices.
-- **[NIST Computer Security Resource Center (CSRC)](https://csrc.nist.gov)** — home of the NIST Cybersecurity Framework, SP 800-series, and FIPS standards.
-  *Use it:* map your controls against NIST CSF or SP 800-53 once a year as a gap-check, even informally — it's the reference most auditors and cyber-insurance questionnaires already assume.
-- **[InfraGard](https://www.infragard.org)** — FBI-affiliated public-private partnership for critical-infrastructure threat information sharing; free membership, vetting required.
-- **[SANS Internet Storm Center](https://isc.sans.edu)** — free daily threat diary and handler analysis from the SANS community.
-- **[Cisco Talos Intelligence Group](https://talosintelligence.com)** — free threat-intel research, IP/domain reputation lookups, and vulnerability disclosures.
-- **[Spamhaus](https://www.spamhaus.org)** — free DNSBL/blocklists for spam, malware, and botnet C2 infrastructure.
-- **[MITRE ATT&CK](https://attack.mitre.org)** — the reference knowledge base of adversary tactics and techniques (the [Navigator](https://github.com/mitre-attack/attack-navigator) app is in [`learn-and-practice/`](../learn-and-practice/README.md)).
-- **[abuse.ch](https://abuse.ch)** — free malware/botnet tracking feeds (MalwareBazaar, URLhaus, Feodo Tracker, ThreatFox).
-- **[CISA](https://www.cisa.gov)** — the umbrella site for the above CISA resources: advisories, alerts, and known-exploited-vulnerabilities catalog.
+| Tool | What it does |
+|---|---|
+| [National Council of ISACs](tools/national-council-of-isacs.md) | Directory of ISACs by sector; join the one for your industry. |
+| [Cyber Threat Alliance](tools/cyber-threat-alliance.md) | Vendor-neutral nonprofit coordinating threat-intel sharing. |
+| [CISA Automated Indicator Sharing (AIS)](tools/cisa-ais.md) | Free, real-time bidirectional indicator sharing with the US government. |
+| [MISP](../detect-and-respond/tools/misp.md) | Open-source threat-intel platform *(page under detect-and-respond)*. |
+| [Uncoder IO (SOC Prime)](tools/uncoder-io.md) | Free browser-based Sigma/Roota rule converter. |
+| [LevelBlue Open Threat Exchange (OTX)](tools/otx.md) | Free, crowdsourced threat-intel sharing platform. |
+| [CISA Cybersecurity Best Practices](tools/cisa-best-practices.md) | The US government's baseline security guidance hub. |
+| [NIST Computer Security Resource Center (CSRC)](tools/nist-csrc.md) | Home of the NIST CSF, SP 800-series, and FIPS standards. |
+| [InfraGard](tools/infragard.md) | FBI-affiliated public-private critical-infrastructure sharing partnership. |
+| [SANS Internet Storm Center](tools/sans-isc.md) | Free daily threat diary and handler analysis. |
+| [Cisco Talos Intelligence Group](tools/cisco-talos.md) | Free threat-intel research and reputation lookups. |
+| [Spamhaus](tools/spamhaus.md) | Free DNSBL/blocklists for spam, malware, and botnet C2. |
+| [MITRE ATT&CK](tools/mitre-attack.md) | The reference knowledge base of adversary tactics and techniques. |
+| [abuse.ch](tools/abusech.md) | Free malware/botnet tracking feeds (MalwareBazaar, URLhaus, ThreatFox). |
+| [CISA](tools/cisa.md) | Umbrella site for CISA advisories, alerts, and the KEV catalog. |
 
 ## More tools worth knowing
 
-- **[CrowdStrike Threat Intelligence](https://www.crowdstrike.com/platform/threat-intelligence/)** — commercial threat-intel and adversary-tracking service.
-- **[Anomali ThreatStream](https://www.anomali.com/products/threatstream)** — commercial threat-intelligence management platform.
-- **[Mandiant (Google Cloud)](https://cloud.google.com/security/mandiant)** — commercial threat-intel research and incident-response consulting.
-- **[MS-ISAC Real-Time Indicator Feeds](https://www.cisecurity.org/ms-isac/services/real-time-indicator-feeds)** — free automated malicious-IP/domain indicator feed for US state, local, tribal, and territorial (SLTT) government members via the Center for Internet Security.
-  *Use it:* if your org qualifies for MS-ISAC membership (SLTT government), pipe this feed into your firewall/DNS blocklist or SIEM the same way you would AIS or OTX above — it's free but membership-gated, not open to the public.
+| Tool | What it does |
+|---|---|
+| [CrowdStrike Threat Intelligence](tools/crowdstrike-ti.md) | Commercial threat-intel and adversary-tracking service. |
+| [Anomali ThreatStream](tools/anomali-threatstream.md) | Commercial threat-intelligence management platform. |
+| [Mandiant (Google Cloud)](tools/mandiant.md) | Commercial threat-intel research and IR consulting. |
+| [MS-ISAC Real-Time Indicator Feeds](tools/ms-isac-feeds.md) | Free automated indicator feed for SLTT government members. |
 
-*General infrastructure guidance:* feed the free sources (AIS, OTX, abuse.ch, MISP feeds) into whatever platform you're already running in [`detect-and-respond/`](../detect-and-respond/README.md) (MISP, OpenCTI) so indicators become automated blocklist/detection updates instead of another tab to check manually; treat ISAC and InfraGard membership as a people-and-process investment, not a tool to deploy.
+*General infrastructure guidance:* feed the free sources ([AIS](tools/cisa-ais.md), [OTX](tools/otx.md), [abuse.ch](tools/abusech.md), MISP feeds) into whatever platform you're already running in [`detect-and-respond/`](../detect-and-respond/README.md) ([MISP](../detect-and-respond/tools/misp.md), [OpenCTI](../detect-and-respond/tools/opencti.md)) so indicators become automated blocklist/detection updates instead of another tab to check manually; treat ISAC and InfraGard membership as a people-and-process investment, not a tool to deploy.
