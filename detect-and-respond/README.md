@@ -36,4 +36,27 @@ Monitoring, alerting, and the tools SOC/blue-team work actually runs on.
 - **[p0f](https://github.com/p0f/p0f)** — passive OS/traffic fingerprinting from packet captures.
 - **[GreyNoise (pygreynoise)](https://github.com/GreyNoise-Intelligence/pygreynoise)** — API client for filtering internet background noise out of alerts; free-tier SaaS.
 
+## Deception & honeypots
+
+Tripwires that generate a high-confidence alert the moment someone touches them — no tuning, no baseline noise, because nothing legitimate should ever trigger one.
+
+- **[Canarytokens](https://github.com/thinkst/canarytokens)** — Thinkst's free, self-hostable canary-token generator (also free-hosted at [canarytokens.org](https://canarytokens.org)); makes tripwire files, URLs, AWS keys, DNS records, etc. that alert on use.
+  *Use it:* drop a handful into places an attacker would actually look — a fake `credentials.xlsx` on a file share, a bogus AWS key in a repo, a canary DNS record — and point the alert at email or Slack; this is the highest signal-to-effort detection you can add in an afternoon.
+- **[OpenCanary](https://github.com/thinkst/opencanary)** — Thinkst's free, lightweight honeypot daemon that emulates common services (SSH, RDP, SMB, HTTP, etc.) and alerts on any interaction.
+  *Use it:* run it on a spare VM/container on an internal VLAN with a hostname like a real server — any traffic to it at all is a real finding, feed alerts into the same pipeline as your SIEM (Wazuh/TheHive).
+- **[Thinkst Canary](https://canary.tools)** — commercial hardware/virtual honeypot appliance from the same team behind Canarytokens/OpenCanary; no public repo, paid product.
+- **[T-Pot](https://github.com/telekom-security/tpot)** — Deutsche Telekom's all-in-one honeypot platform, bundling 20+ honeypots (Cowrie, Dionaea, Conpot, etc.) behind one dashboard.
+  *Use it:* stand it up on an isolated VM with a public-facing IP if you want real-world attack telemetry — never on the same network segment as anything that matters, it's designed to get hit.
+- **[Cowrie](https://github.com/cowrie/cowrie)** — SSH/Telnet honeypot that logs full attacker sessions, including credentials tried and commands run.
+- **[Dionaea](https://github.com/DinoTools/dionaea)** — malware-capturing honeypot that emulates vulnerable network services to collect dropped payloads.
+- **[Conpot](https://github.com/mushorg/conpot)** — ICS/SCADA honeypot emulating industrial protocols (Modbus, S7comm); useful for OT-adjacent homelabs.
+- **[HoneyTrap](https://github.com/honeytrap/honeytrap)** — modular, extensible honeypot framework for building custom low/medium-interaction traps.
+- **[SNARE & TANNER](https://github.com/mushorg/snare)** — modern web-application honeypot pair (SNARE serves cloned pages, TANNER drives detection logic), successor to Glastopf.
+- **[HoneyPy](https://github.com/foospidy/HoneyPy)** — low-interaction Python honeypot, easy to extend with new service plugins.
+- **[Beeswarm](https://github.com/honeynet/beeswarm)** — pairs honeypots with "honeyclients" to catch credential theft in both directions.
+- **[Wordpot](https://github.com/gbrindisi/wordpot)** — WordPress-specific honeypot for catching plugin/theme exploitation attempts.
+- **[HFish](https://github.com/hacklcx/HFish)** — free honeypot deployment/management platform with a wide range of service probes and a central dashboard.
+
+*Deception infrastructure guidance:* canary tokens cost nothing and belong everywhere (file shares, repos, inboxes, cloud credentials) — deploy those first. Full honeypots (T-Pot, Cowrie, Dionaea) need their own isolated VLAN or DMZ segment with no legitimate traffic and no route to production, since the entire point is that anything touching them is hostile; route every alert from both into the same case-management pipeline as the rest of this folder rather than a separate silo.
+
 *General infrastructure guidance:* stand up detection tooling on a SPAN/mirror port or agent-based collection so it's read-only against production traffic, route everything into one case-management tool (TheHive) rather than triaging in Slack/email, and treat every new rule as "tune against your own baseline for a week before it pages anyone."
