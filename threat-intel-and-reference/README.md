@@ -28,5 +28,7 @@ ISACs, sharing communities, standards bodies, and vendor threat-intel feeds — 
 - **[CrowdStrike Threat Intelligence](https://www.crowdstrike.com/platform/threat-intelligence/)** — commercial threat-intel and adversary-tracking service.
 - **[Anomali ThreatStream](https://www.anomali.com/products/threatstream)** — commercial threat-intelligence management platform.
 - **[Mandiant (Google Cloud)](https://cloud.google.com/security/mandiant)** — commercial threat-intel research and incident-response consulting.
+- **[MS-ISAC Real-Time Indicator Feeds](https://www.cisecurity.org/ms-isac/services/real-time-indicator-feeds)** — free automated malicious-IP/domain indicator feed for US state, local, tribal, and territorial (SLTT) government members via the Center for Internet Security.
+  *Use it:* if your org qualifies for MS-ISAC membership (SLTT government), pipe this feed into your firewall/DNS blocklist or SIEM the same way you would AIS or OTX above — it's free but membership-gated, not open to the public.
 
 *General infrastructure guidance:* feed the free sources (AIS, OTX, abuse.ch, MISP feeds) into whatever platform you're already running in [`detect-and-respond/`](../detect-and-respond/README.md) (MISP, OpenCTI) so indicators become automated blocklist/detection updates instead of another tab to check manually; treat ISAC and InfraGard membership as a people-and-process investment, not a tool to deploy.
