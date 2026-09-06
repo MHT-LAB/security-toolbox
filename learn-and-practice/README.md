@@ -2,36 +2,41 @@
 
 Hands-on ranges, CTFs, and reference material for building the muscle.
 
+Every tool below has its own page under [`tools/`](tools/) with Overview, Install/Deploy, Common Commands, a concrete Lab Exercise, and Related Tools — not just a link out.
+
 ## 🏆 Top 15 (most widely used)
 
-- **[TryHackMe](https://tryhackme.com)** — guided, hands-on rooms; free tier covers most fundamentals. SaaS, no public repo.
-  *Use it:* work rooms in order within a learning path (e.g. "Pre Security" → "Jr Penetration Tester"), not at random — the guided structure is the actual value over raw HTB-style boxes.
-- **[Hack The Box](https://www.hackthebox.com)** — pentesting labs and machines; free tier available. SaaS, no public repo.
-- **[OverTheWire Wargames](https://overthewire.org/wargames/)** — free wargames for Linux, SSH, and security fundamentals. Site-hosted, no central repo.
-- **[picoCTF](https://github.com/picoCTF/picoCTF)** — free, beginner-friendly CTF platform built by Carnegie Mellon; platform itself is open source.
-- **[VulnHub](https://www.vulnhub.com)** — free downloadable vulnerable VMs for practice. Archive site, no active repo.
-- **[LetsDefend](https://letsdefend.io)** — free-tier SOC analyst simulation platform. SaaS.
-- **[CyberDefenders](https://cyberdefenders.org)** — free blue-team DFIR challenges. SaaS.
-- **[MITRE ATT&CK Navigator](https://github.com/mitre-attack/attack-navigator)** — browser-based technique mapping against the ATT&CK framework.
-- **[Metasploitable3](https://github.com/rapid7/metasploitable3)** — intentionally vulnerable VM, the standard first target for offensive-tool practice.
-- **[DVWA](https://github.com/digininja/DVWA)** — Damn Vulnerable Web Application, a local standard for web attack fundamentals.
-- **[WebGoat](https://github.com/WebGoat/WebGoat)** — OWASP's deliberately insecure training web app.
-- **[Juice Shop](https://github.com/juice-shop/juice-shop)** — OWASP's modern intentionally-vulnerable web app; good next step after DVWA/WebGoat.
-- **[OWASP Security Shepherd](https://github.com/OWASP/SecurityShepherd)** — web/mobile app security training platform with progressive challenges.
-- **[CTFd](https://github.com/CTFd/CTFd)** — the standard open-source platform for hosting your own CTF.
-- **[PentesterLab](https://pentesterlab.com)** — hands-on web/exploit-focused exercises; has free content, mostly paid. SaaS.
+| Tool | What it does |
+|---|---|
+| [TryHackMe](tools/tryhackme.md) | Guided, hands-on rooms; free tier covers most fundamentals. |
+| [Hack The Box](tools/hack-the-box.md) | Pentesting labs and machines; free tier available. |
+| [OverTheWire Wargames](tools/overthewire.md) | Free wargames for Linux, SSH, and security fundamentals. |
+| [picoCTF](tools/picoctf.md) | Free, beginner-friendly CTF platform built by Carnegie Mellon. |
+| [VulnHub](tools/vulnhub.md) | Free downloadable vulnerable VMs for practice. |
+| [LetsDefend](tools/letsdefend.md) | Free-tier SOC analyst simulation platform. |
+| [CyberDefenders](tools/cyberdefenders.md) | Free blue-team DFIR challenges. |
+| [MITRE ATT&CK Navigator](tools/mitre-attack-navigator.md) | Browser-based technique mapping against ATT&CK. |
+| [Metasploitable3](../test-and-exploit/tools/metasploitable3.md) | Intentionally vulnerable VM, the standard first target *(page under test-and-exploit)*. |
+| [DVWA](../test-and-exploit/tools/dvwa.md) | Adjustable-difficulty web target *(page under test-and-exploit)*. |
+| [WebGoat](../test-and-exploit/tools/webgoat.md) | OWASP's guided, lesson-based insecure training app *(page under test-and-exploit)*. |
+| [Juice Shop](../test-and-exploit/tools/juice-shop.md) | OWASP's modern intentionally-vulnerable app *(page under test-and-exploit)*. |
+| [OWASP Security Shepherd](tools/owasp-security-shepherd.md) | Web/mobile app security training platform. |
+| [CTFd](tools/ctfd.md) | The standard open-source platform for hosting your own CTF. |
+| [PentesterLab](tools/pentesterlab.md) | Hands-on web/exploit-focused exercises. |
 
 ## More tools worth knowing
 
-- **[rCTF](https://github.com/redpwn/rctf)** — lightweight, scalable open-source CTF platform (used by redpwn/Ubiquity).
-- **[DetectionLab](https://github.com/clong/DetectionLab)** — Vagrant/Packer-built AD lab pre-wired with logging/detection tooling — ideal for practicing blue-team work end to end.
-- **[GOAD (Game of Active Directory)](https://github.com/Orange-Cyberdefense/GOAD)** — vulnerable-by-design Active Directory lab for practicing AD attack paths.
-- **[Vulnerable-AD](https://github.com/WazeHell/vulnerable-AD)** — scripts to build a deliberately misconfigured AD environment for practice.
-- **[Damn Vulnerable Web Services (DVWS)](https://github.com/snoopysecurity/dvws)** — vulnerable SOAP/REST API target for web-service security testing.
-- **[bWAPP](https://github.com/ismailtasdelen/bWAPP)** — "buggy web application" covering 100+ vulnerability classes.
-- **[DVIA-v2](https://github.com/prateek147/DVIA-v2)** — Damn Vulnerable iOS App, for mobile security practice.
-- **[OVAA](https://github.com/oversecured/ovaa)** — Oversecured Vulnerable Android App, for mobile security practice.
-- **[Root-Me](https://www.root-me.org)** — long-running free challenge site across many security domains. Site-hosted.
-- **[CTFtime](https://ctftime.org)** — event tracker/ratings for competitive CTF teams; the reference calendar for the CTF scene.
+| Tool | What it does |
+|---|---|
+| [rCTF](tools/rctf.md) | Lightweight, scalable open-source CTF platform. |
+| [DetectionLab](tools/detectionlab.md) | Vagrant/Packer-built AD lab pre-wired with logging/detection tooling. |
+| [GOAD (Game of Active Directory)](tools/goad.md) | Vulnerable-by-design AD lab for practicing attack paths. |
+| [Vulnerable-AD](tools/vulnerable-ad.md) | Scripts to build a deliberately misconfigured AD environment. |
+| [Damn Vulnerable Web Services (DVWS)](tools/dvws.md) | Vulnerable SOAP/REST API target. |
+| [bWAPP](tools/bwapp.md) | "Buggy web application" covering 100+ vulnerability classes. |
+| [DVIA-v2](tools/dvia-v2.md) | Damn Vulnerable iOS App, for mobile security practice. |
+| [OVAA](tools/ovaa.md) | Oversecured Vulnerable Android App, for mobile security practice. |
+| [Root-Me](tools/root-me.md) | Long-running free challenge site across many security domains. |
+| [CTFtime](tools/ctftime.md) | Event tracker/ratings for competitive CTF teams. |
 
-*General infrastructure guidance:* build the AD/web/network labs above (DetectionLab, GOAD, Metasploitable3) on the same isolated hypervisor network used for [`test-and-exploit/`](../test-and-exploit/README.md), and log everything to a [`detect-and-respond/`](../detect-and-respond/README.md) stack (Wazuh/Security Onion) so practice attacks double as practice detections.
+*General infrastructure guidance:* build the AD/web/network labs above ([DetectionLab](tools/detectionlab.md), [GOAD](tools/goad.md), [Metasploitable3](../test-and-exploit/tools/metasploitable3.md)) on the same isolated hypervisor network used for [`test-and-exploit/`](../test-and-exploit/README.md), and log everything to a [`detect-and-respond/`](../detect-and-respond/README.md) stack (Wazuh/Security Onion) so practice attacks double as practice detections.
