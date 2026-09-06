@@ -2,44 +2,48 @@
 
 Forensics, malware analysis, and pulling the real story out of an artifact.
 
+Every tool below has its own page under [`tools/`](tools/) with Overview, Install/Deploy, Common Commands, a concrete Lab Exercise, and Related Tools — not just a link out.
+
 ## 🏆 Top 15 (most widely used)
 
-- **[Wireshark](https://github.com/wireshark/wireshark)** — the standard for packet capture and protocol analysis.
-  *Use it:* capture on a mirrored port or a saved .pcap, never live on a production interface you don't control — filter with display filters before you scroll, not after.
-- **[Autopsy](https://github.com/sleuthkit/autopsy)** — free digital forensics platform (GUI for The Sleuth Kit).
-- **[The Sleuth Kit](https://github.com/sleuthkit/sleuthkit)** — command-line disk/file-system forensics library underlying Autopsy.
-- **[Volatility 3](https://github.com/volatilityfoundation/volatility3)** — memory forensics framework.
-- **[YARA](https://github.com/VirusTotal/yara)** — pattern-matching for identifying and classifying malware.
-- **[CAPEv2](https://github.com/kevoreilly/CAPEv2)** — automated malware analysis sandbox (Cuckoo successor).
-- **[Cuckoo Sandbox](https://github.com/cuckoosandbox/cuckoo)** — the original open-source automated malware sandbox CAPE forked from.
-- **[Ghidra](https://github.com/NationalSecurityAgency/ghidra)** — NSA's free software reverse-engineering suite.
-- **[radare2](https://github.com/radareorg/radare2)** — command-line reverse-engineering framework.
-- **[Cutter](https://github.com/rizinorg/cutter)** — GUI front end for radare2/Rizin, much friendlier for daily RE work.
-- **[x64dbg](https://github.com/x64dbg/x64dbg)** — open-source user-mode Windows debugger.
-- **[REMnux](https://github.com/REMnux/remnux)** — Linux distro pre-loaded for malware analysis.
-- **[Plaso / log2timeline](https://github.com/log2timeline/plaso)** — builds super-timelines from forensic artifacts across a whole system.
-- **[CyberChef](https://github.com/gchq/CyberChef)** — GCHQ's "cyber Swiss Army knife" for decoding/transforming data, runs entirely in-browser.
-- **[MISP](https://github.com/MISP/MISP)** — threat-intel platform, doubles as an IOC correlation tool during investigations.
+| Tool | What it does |
+|---|---|
+| [Wireshark](tools/wireshark.md) | The standard for packet capture and protocol analysis. |
+| [Autopsy](tools/autopsy.md) | Free digital forensics platform (GUI for The Sleuth Kit). |
+| [The Sleuth Kit](tools/sleuthkit.md) | Command-line disk/file-system forensics library. |
+| [Volatility 3](tools/volatility3.md) | Memory forensics framework. |
+| [YARA](tools/yara.md) | Pattern-matching for identifying and classifying malware. |
+| [CAPEv2](tools/capev2.md) | Automated malware analysis sandbox (Cuckoo successor). |
+| [Cuckoo Sandbox](tools/cuckoo-sandbox.md) | The original open-source automated malware sandbox. |
+| [Ghidra](tools/ghidra.md) | NSA's free software reverse-engineering suite. |
+| [radare2](tools/radare2.md) | Command-line reverse-engineering framework. |
+| [Cutter](tools/cutter.md) | GUI front end for radare2/Rizin. |
+| [x64dbg](tools/x64dbg.md) | Open-source user-mode Windows debugger. |
+| [REMnux](tools/remnux.md) | Linux distro pre-loaded for malware analysis. |
+| [Plaso / log2timeline](tools/plaso.md) | Builds super-timelines from forensic artifacts. |
+| [CyberChef](tools/cyberchef.md) | GCHQ's "cyber Swiss Army knife" for decoding/transforming data. |
+| [MISP](../detect-and-respond/tools/misp.md) | Threat-intel platform, doubles as IOC correlation during investigations *(page under detect-and-respond)*. |
 
 ## More tools worth knowing
 
-- **[Timesketch](https://github.com/google/timesketch)** — collaborative timeline analysis, pairs with Plaso output.
-- **[Bulk Extractor](https://github.com/simsong/bulk_extractor)** — scans disk images/files for emails, URLs, and other artifacts without parsing the file system.
-- **[RegRipper](https://github.com/keydet89/RegRipper3.0)** — Windows registry parsing and analysis.
-- **[Eric Zimmerman's Tools (EZ Tools)](https://github.com/EricZimmerman)** — the de facto standard suite for Windows DFIR artifact parsing (MFTECmd, Registry Explorer, Timeline Explorer, etc.).
-- **[Chainsaw](https://github.com/WithSecureLabs/chainsaw)** — rapid triage/hunting over Windows event logs using Sigma rules.
-- **[Hayabusa](https://github.com/Yamato-Security/hayabusa)** — fast Windows event log timeline/detection tool, Sigma-compatible.
-- **[Loki](https://github.com/Neo23x0/Loki)** — simple IOC and YARA scanner for compromise indicators.
-- **[Fenrir](https://github.com/Neo23x0/Fenrir)** — bash-based IOC scanner for *nix hosts, no dependencies to install.
-- **[binwalk](https://github.com/ReFirmLabs/binwalk)** — firmware analysis and extraction tool.
-- **[Detect It Easy (DIE)](https://github.com/horsicq/Detect-It-Easy)** — file-type and packer detection for binaries.
-- **[FLARE-VM](https://github.com/mandiant/flare-vm)** — Mandiant's Windows VM configuration for reverse engineering and malware analysis.
-- **[FLOSS](https://github.com/mandiant/flare-floss)** — extracts obfuscated strings from malware binaries.
-- **[Arsenal Image Mounter](https://github.com/ArsenalRecon/Arsenal-Image-Mounter)** — mounts forensic disk images as drives on Windows for native tool access.
-- **[VirusTotal](https://www.virustotal.com)** — free multi-engine file/URL/hash reputation lookup; SaaS, no public core repo.
-  *Use it:* check a hash or URL before you ever run it, and pivot from a VT relationship graph to find related samples/infrastructure — never upload sensitive or client-confidential files, VT results are shared with its partner engines.
-- **[JoeSandbox](https://www.joesandbox.com)** — commercial automated malware sandbox with a free/community submission tier; SaaS, no public repo.
-- **[Hybrid Analysis](https://www.hybrid-analysis.com)** — free, CrowdStrike-run automated malware sandbox (Falcon Sandbox); SaaS, no public repo.
-- **[MxToolbox Email Header Analyzer](https://mxtoolbox.com/EmailHeaders.aspx)** — free RFC822 email-header parser for tracing a phishing email's real origin; SaaS, no public repo.
+| Tool | What it does |
+|---|---|
+| [Timesketch](tools/timesketch.md) | Collaborative timeline analysis, pairs with Plaso. |
+| [Bulk Extractor](tools/bulk-extractor.md) | Scans disk images/files for artifacts without file-system parsing. |
+| [RegRipper](tools/regripper.md) | Windows registry parsing and analysis. |
+| [Eric Zimmerman's Tools (EZ Tools)](tools/ez-tools.md) | The standard suite for Windows DFIR artifact parsing. |
+| [Chainsaw](tools/chainsaw.md) | Rapid triage/hunting over Windows event logs using Sigma. |
+| [Hayabusa](tools/hayabusa.md) | Fast Windows event log timeline/detection tool. |
+| [Loki](tools/loki.md) | Simple IOC and YARA scanner for compromise indicators. |
+| [Fenrir](tools/fenrir.md) | Bash-based IOC scanner for *nix hosts, no dependencies. |
+| [binwalk](tools/binwalk.md) | Firmware analysis and extraction tool. |
+| [Detect It Easy (DIE)](tools/detect-it-easy.md) | File-type and packer detection for binaries. |
+| [FLARE-VM](tools/flare-vm.md) | Mandiant's Windows VM configuration for reverse engineering. |
+| [FLOSS](tools/floss.md) | Extracts obfuscated strings from malware binaries. |
+| [Arsenal Image Mounter](tools/arsenal-image-mounter.md) | Mounts forensic disk images as drives on Windows. |
+| [VirusTotal](tools/virustotal.md) | Free multi-engine file/URL/hash reputation lookup. |
+| [JoeSandbox](tools/joesandbox.md) | Commercial automated malware sandbox, free community tier. |
+| [Hybrid Analysis](tools/hybrid-analysis.md) | Free, CrowdStrike-run automated malware sandbox. |
+| [MxToolbox Email Header Analyzer](tools/mxtoolbox-email-header.md) | Free RFC822 email-header parser. |
 
-*General infrastructure guidance:* run malware sandboxes (CAPE/Cuckoo, REMnux) on isolated hosts with no route back to production — a dedicated hypervisor VLAN with host-only networking is standard. Work from disk-image copies and hash-verify them before and after analysis; never analyze on the source drive.
+*General infrastructure guidance:* run malware sandboxes ([CAPEv2](tools/capev2.md)/[Cuckoo](tools/cuckoo-sandbox.md), [REMnux](tools/remnux.md)) on isolated hosts with no route back to production — a dedicated hypervisor VLAN with host-only networking is standard. Work from disk-image copies and hash-verify them before and after analysis; never analyze on the source drive.
