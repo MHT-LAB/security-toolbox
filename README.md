@@ -17,7 +17,22 @@ Organized by what the tool *does*, not by product category. Pick the folder for 
 
 Each category README leads with a **🏆 Top 15** — the most widely adopted tools for that job, by real-world usage — followed by a longer **More tools worth knowing** list. Links point to the tool's GitHub repo where one exists; commercial/SaaS tools with no public repo (Burp Suite, Shodan, Maltego, TryHackMe, HTB, Proxmox) link to the official site instead and say so.
 
+**[`test-and-exploit/`](test-and-exploit/README.md) is fully broken out into per-tool pages** under [`test-and-exploit/tools/`](test-and-exploit/tools/) — each tool gets its own file with Overview, Install/Deploy, Common Commands, a concrete Lab Exercise, and Related Tools, instead of a one-line link. The category README is now an index table pointing to each page. This is the pattern the other categories will get next, once it's confirmed useful in this one.
+
 ## Entry format
+
+**Index-style categories** (currently `test-and-exploit/`): the README is a table linking to `tools/<tool-slug>.md`. Each tool page follows:
+
+    # Tool Name
+    One-line description.
+    **Links:** [GitHub](...) · [Docs](...)
+    ## Overview
+    ## Install / Deploy
+    ## Common Commands
+    ## Lab Exercise
+    ## Related Tools
+
+**Flat-list categories** (everything else, for now):
 
     - [Tool Name](https://github-link-or-site) — what it does, one line.
       *Use it:* the most appropriate way to test or run this in a real lab/infrastructure — not just what it is, but how to actually deploy or invoke it safely.
